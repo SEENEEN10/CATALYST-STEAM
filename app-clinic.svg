@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Clinic Sterilization Room</title>
+  <desc id="desc">Sterilization clinic environment without people.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#123437"/>
+      <stop offset="100%" stop-color="#1f4e4a"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e3f0ec"/>
+      <stop offset="100%" stop-color="#bdd6ce"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d8fff3" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d8fff3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="130" y="130" width="1340" height="620" rx="22" fill="url(#tile)"/>
+  <rect x="220" y="230" width="500" height="430" rx="18" fill="#f5fbf9"/>
+  <rect x="860" y="230" width="520" height="430" rx="18" fill="#f5fbf9"/>
+  <rect x="950" y="300" width="340" height="130" rx="14" fill="#d7ebe5"/>
+  <circle cx="470" cy="420" r="120" fill="#0f8d69" opacity="0.2"/>
+  <circle cx="470" cy="420" r="88" fill="#0f8d69" opacity="0.35"/>
+  <path d="M470 345 v150 M395 420 h150" stroke="#0f8d69" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="1160" cy="320" r="120" fill="url(#glow)"/>
+  <path d="M1120 250 C1090 220 1080 190 1095 160" stroke="#baf2e3" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M1170 250 C1140 220 1130 190 1145 160" stroke="#baf2e3" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M1220 250 C1190 220 1180 190 1195 160" stroke="#baf2e3" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <rect x="300" y="570" width="980" height="120" rx="16" fill="#d3e6df"/>
+</svg>
