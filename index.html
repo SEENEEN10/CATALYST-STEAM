@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CATALYST STEAM حلول تبخير فوري ذكية للمنشآت التجارية والصناعية." />
-  <title>CATALYST STEAM | حلول التبخير الفوري</title>
+  <meta name="description" content="CATALYST STEAM delivers smart instant steam solutions for commercial and industrial facilities." />
+  <title>CATALYST STEAM | Instant Steam Solutions</title>
   <script>
     (function () {
       if (!location.hostname || !location.hostname.endsWith("github.io")) return;
@@ -17,10 +17,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="lang-en">
   <div class="site-bg" aria-hidden="true"></div>
 
   <header class="site-header">
@@ -29,17 +29,21 @@
         <img class="brand-logo" src="assets/media/catalyst-logo-top.svg" alt="Catalyst logo" />
         <div class="brand-copy">
           <strong>CATALYST STEAM</strong>
-          <span>الشركة الهندسية لحلول التبخير الفوري</span>
+          <span data-i18n="brand_subtitle">Engineering Company for Instant Steam Solutions</span>
         </div>
       </a>
       <nav class="nav-links">
-        <a href="#solution">الحل</a>
-        <a href="#applications">التطبيقات</a>
-        <a href="#media">آلية التشغيل</a>
-        <a href="#order">الشراء والدفع</a>
-        <a href="#contact">التواصل</a>
+        <a href="#solution" data-i18n="nav_solution">Solution</a>
+        <a href="#applications" data-i18n="nav_applications">Applications</a>
+        <a href="#media" data-i18n="nav_media">How It Works</a>
+        <a href="#order" data-i18n="nav_order">Order & Payment</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
-      <a class="btn btn-primary btn-sm" href="https://wa.me/201044175125" target="_blank" rel="noopener noreferrer">واتساب مباشر</a>
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="ar">AR</button>
+      </div>
+      <a class="btn btn-primary btn-sm" href="https://wa.me/201044175125" target="_blank" rel="noopener noreferrer" data-i18n="cta_whatsapp_top">WhatsApp Direct</a>
     </div>
   </header>
 
@@ -51,33 +55,30 @@
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">تقنية تبخير فوري ترفع كفاءة التشغيل وتقلل التعقيد اليومي</p>
-          <h1>الحل الذكي للتبخير الفوري</h1>
-          <p>
-            تقدم <strong>CATALYST STEAM</strong> منظومة تبخير مدمجة مصممة للبيئات التجارية والصناعية،
-            لتمنحك بخارًا مباشرًا واستجابة سريعة مع تشغيل ثابت يناسب الاستخدامات المعروفة في السوق.
-          </p>
+          <p class="eyebrow" data-i18n="hero_eyebrow">Smart instant steam technology that improves productivity and simplifies daily operations</p>
+          <h1 data-i18n="hero_title">The Smart Instant Steam Solution</h1>
+          <p data-i18n="hero_desc">CATALYST STEAM delivers a compact instant steam system built for commercial and industrial use, giving you fast steam output, stable performance, and easy day-to-day operation.</p>
           <div class="hero-feature-grid">
             <article class="hero-feature">
               <span>⚙</span>
-              <p>لا يحتاج إلى مهندس كهرباء أو مهندس ميكانيكا للتوصيل.</p>
+              <p data-i18n="feature_1">No electrical or mechanical specialist is required for setup.</p>
             </article>
             <article class="hero-feature">
               <span>💧</span>
-              <p>يكفي توصيل مصدر المياه مع الجهاز وتوصيل الكهرباء فقط.</p>
+              <p data-i18n="feature_2">Connect the water supply and power, and you are ready.</p>
             </article>
             <article class="hero-feature">
               <span>☁</span>
-              <p>بمجرد فتح مصدر المياه يبدأ خروج البخار مباشرة.</p>
+              <p data-i18n="feature_3">Steam starts immediately when the water line is opened.</p>
             </article>
             <article class="hero-feature">
               <span>✓</span>
-              <p>بدون توصيلات معقدة، وبدون بنية تحتية ثقيلة.</p>
+              <p data-i18n="feature_4">No complex piping and no heavy infrastructure.</p>
             </article>
           </div>
           <div class="cta-row">
-            <a class="btn btn-primary" href="https://wa.me/201044175125" target="_blank" rel="noopener noreferrer">اطلب عرض سعر عبر واتساب</a>
-            <a class="btn btn-outline" href="#order">اطلب الآن</a>
+            <a class="btn btn-primary" href="https://wa.me/201044175125" target="_blank" rel="noopener noreferrer" data-i18n="cta_quote">Request a Quote on WhatsApp</a>
+            <a class="btn btn-outline" href="#order" data-i18n="cta_order">Order Now</a>
           </div>
         </div>
 
@@ -94,30 +95,27 @@
     <section class="section solution" id="solution">
       <div class="container">
         <div class="section-head reveal">
-          <p class="kicker">القيمة التشغيلية</p>
-          <h2>حل هندسي عملي يخدم بيئة الأعمال الحديثة</h2>
-          <p>
-            بدل الاعتماد على منظومات تبخير تقليدية كثيرة التعقيد، يوفر النظام نموذجًا تشغيليًا أكثر ذكاءً
-            يوازن بين الكفاءة، الاستقرار، وسهولة الإدارة اليومية.
-          </p>
+          <p class="kicker" data-i18n="solution_kicker">Operational Value</p>
+          <h2 data-i18n="solution_title">Practical engineering built for modern businesses</h2>
+          <p data-i18n="solution_desc">Instead of complex traditional steam systems, this solution gives you a smarter operating model with better efficiency, stronger reliability, and simpler daily management.</p>
         </div>
 
         <div class="value-grid">
           <article class="value-card reveal">
-            <h3>تقليل التكلفة التشغيلية</h3>
-            <p>تصميم الطاقة الذكي يساعد على خفض استهلاك الكهرباء وتحسين العائد من كل ساعة تشغيل.</p>
+            <h3 data-i18n="value_1_title">Lower Operating Costs</h3>
+            <p data-i18n="value_1_text">Smart energy design helps reduce electricity usage and improve return on every operating hour.</p>
           </article>
           <article class="value-card reveal delay-1">
-            <h3>رفع كفاءة المساحات</h3>
-            <p>حجم مدمج يتيح استثمار المساحة الإنتاجية بدل تخصيص غرف كاملة للبنية التقليدية.</p>
+            <h3 data-i18n="value_2_title">Better Space Efficiency</h3>
+            <p data-i18n="value_2_text">The compact footprint frees up valuable production space instead of using large utility rooms.</p>
           </article>
           <article class="value-card reveal delay-2">
-            <h3>استقرار تشغيلي أعلى</h3>
-            <p>بنية مبسطة ونقاط فشل أقل، ما ينعكس مباشرة على تقليل التوقفات غير المخطط لها.</p>
+            <h3 data-i18n="value_3_title">Higher Reliability</h3>
+            <p data-i18n="value_3_text">A simplified system with fewer failure points helps reduce unplanned downtime.</p>
           </article>
           <article class="value-card reveal delay-3">
-            <h3>جاهزية للمنشآت المتطلبة</h3>
-            <p>ملائم للساونا، المخابز الاحترافية، المغاسل، المطابخ الفندقية، والعيادات والمنتجعات.</p>
+            <h3 data-i18n="value_4_title">Ready for Demanding Facilities</h3>
+            <p data-i18n="value_4_text">Ideal for steam rooms, professional bakeries, laundry operations, hospitality kitchens, clinics, and wellness centers.</p>
           </article>
         </div>
       </div>
@@ -126,21 +124,21 @@
     <section class="section workflow" id="media">
       <div class="container workflow-grid">
         <div class="section-head reveal">
-          <p class="kicker">آلية التشغيل</p>
-          <h2>تشغيل مباشر في ثواني</h2>
+          <p class="kicker" data-i18n="workflow_kicker">How It Works</p>
+          <h2 data-i18n="workflow_title">Live Steam in Seconds</h2>
         </div>
         <ol class="flow-list reveal delay-1">
           <li>
-            <strong>خطوة 1: توصيل المياه</strong>
-            <p>شبك مصدر المياه مباشرة بالجهاز عبر التوصيلة المخصصة.</p>
+            <strong data-i18n="step_1_title">Step 1: Connect Water</strong>
+            <p data-i18n="step_1_text">Connect the water source directly to the unit using the designated inlet.</p>
           </li>
           <li>
-            <strong>خطوة 2: توصيل الكهرباء</strong>
-            <p>توصيل كهربائي مباشر بدون أعمال تمديد معقدة.</p>
+            <strong data-i18n="step_2_title">Step 2: Connect Power</strong>
+            <p data-i18n="step_2_text">Plug into power directly with no complex utility work.</p>
           </li>
           <li>
-            <strong>خطوة 3: فتح المياه</strong>
-            <p>عند فتح مصدر المياه يبدأ خروج البخار فورًا وبشكل مستقر.</p>
+            <strong data-i18n="step_3_title">Step 3: Open Water Line</strong>
+            <p data-i18n="step_3_text">As soon as water flows, steam starts instantly with stable output.</p>
           </li>
         </ol>
       </div>
@@ -149,30 +147,30 @@
     <section class="section applications" id="applications">
       <div class="container">
         <div class="section-head reveal">
-          <p class="kicker">قطاعات مستفيدة</p>
-          <h2>حل متخصص للقطاعات الأكثر احتياجًا للبخار الفوري</h2>
+          <p class="kicker" data-i18n="applications_kicker">Industries We Serve</p>
+          <h2 data-i18n="applications_title">Built for sectors that depend on instant steam</h2>
         </div>
 
         <div class="app-grid reveal">
           <article class="app-card app-sauna">
-            <h3>غرف الساونا والبخار</h3>
-            <p>حل مثالي للنوادي، الفنادق، المنتجعات، والفلل الخاصة. يوفر تشبعًا سريعًا بالبخار وأداءً مستقرًا دون أنظمة مركزية.</p>
+            <h3 data-i18n="app_sauna_title">Steam Rooms & Saunas</h3>
+            <p data-i18n="app_sauna_text">A strong fit for clubs, hotels, resorts, and private villas. Delivers fast steam saturation with stable performance.</p>
           </article>
           <article class="app-card app-bakery">
-            <h3>المخابز والأفران الاحترافية</h3>
-            <p>حقن بخار مباشر للأفران لتحسين جودة القشرة والتحكم في الرطوبة، مناسب للمخابز الصغيرة والكبيرة بحل مستقل لكل فرن.</p>
+            <h3 data-i18n="app_bakery_title">Professional Bakeries & Ovens</h3>
+            <p data-i18n="app_bakery_text">Direct steam injection improves crust quality and moisture control, with a practical setup for both small and large bakeries.</p>
           </article>
           <article class="app-card app-laundry">
-            <h3>المغاسل والدراي كلين</h3>
-            <p>تشغيل محطات كي وكبائن تبخير وتجهيز الملابس ببخار قوي ونظيف، مع نظام كهربائي أكثر أمانًا وكفاءة.</p>
+            <h3 data-i18n="app_laundry_title">Laundry & Dry Cleaning</h3>
+            <p data-i18n="app_laundry_text">Powerful clean steam for ironing stations, steam cabinets, and garment finishing with safer electric operation.</p>
           </article>
           <article class="app-card app-kitchen">
-            <h3>المطابخ والفنادق</h3>
-            <p>بخار للطهي الاحترافي، التعقيم، وتنظيف المعدات بدون تعقيد.</p>
+            <h3 data-i18n="app_kitchen_title">Hospitality Kitchens</h3>
+            <p data-i18n="app_kitchen_text">Reliable steam for professional cooking, sanitization, and equipment cleaning without system complexity.</p>
           </article>
           <article class="app-card app-clinic">
-            <h3>العيادات والمنتجعات</h3>
-            <p>حل عملي لغرف العلاج بالبخار والتعقيم الموضعي.</p>
+            <h3 data-i18n="app_clinic_title">Clinics & Wellness Centers</h3>
+            <p data-i18n="app_clinic_text">A practical solution for therapeutic steam rooms and targeted steam sanitation use cases.</p>
           </article>
         </div>
       </div>
@@ -181,23 +179,23 @@
     <section class="section advantages" id="advantages">
       <div class="container">
         <div class="section-head reveal">
-          <h2>مزايا تنافسية</h2>
+          <h2 data-i18n="advantages_title">Competitive Advantages</h2>
         </div>
         <div class="advantages-wrap reveal">
           <div class="adv-grid">
-            <article class="adv-card"><span class="adv-icon">⬢</span><p>حجم مدمج يوفر المساحة</p></article>
-            <article class="adv-card"><span class="adv-icon">≈</span><p>بخار قوي عالي الكثافة</p></article>
-            <article class="adv-card"><span class="adv-icon">⚡</span><p>تشغيل كهربائي نظيف</p></article>
-            <article class="adv-card"><span class="adv-icon">✓</span><p>تركيب سريع دون بنية تحتية ثقيلة</p></article>
-            <article class="adv-card"><span class="adv-icon">◍</span><p>إمكانية توزيع عدة وحدات حسب الحاجة</p></article>
-            <article class="adv-card"><span class="adv-icon">⌁</span><p>تقليل الأعطال المرتبطة بالأنظمة المركزية</p></article>
-            <article class="adv-card"><span class="adv-icon">∞</span><p>مصمم للعمل بثبات طويل الأمد، وغالبًا لا يحتاج إلى إصلاح أو صيانة لمدة سنتين فأكثر.</p></article>
-            <article class="adv-card"><span class="adv-icon">🛡</span><p>ضمان سنة</p></article>
+            <article class="adv-card"><span class="adv-icon">⬢</span><p data-i18n="adv_1">Compact footprint that saves space</p></article>
+            <article class="adv-card"><span class="adv-icon">≈</span><p data-i18n="adv_2">High-density, high-impact steam output</p></article>
+            <article class="adv-card"><span class="adv-icon">⚡</span><p data-i18n="adv_3">Clean electric operation</p></article>
+            <article class="adv-card"><span class="adv-icon">✓</span><p data-i18n="adv_4">Fast installation without heavy infrastructure</p></article>
+            <article class="adv-card"><span class="adv-icon">◍</span><p data-i18n="adv_5">Flexible multi-unit deployment by demand</p></article>
+            <article class="adv-card"><span class="adv-icon">⌁</span><p data-i18n="adv_6">Fewer central-system related breakdowns</p></article>
+            <article class="adv-card"><span class="adv-icon">∞</span><p data-i18n="adv_7">Designed for stable long-term operation with minimal service needs</p></article>
+            <article class="adv-card"><span class="adv-icon">🛡</span><p data-i18n="adv_8">1-year warranty</p></article>
           </div>
           <aside class="price-spotlight">
-            <p class="price-label">سعر الوحدة</p>
-            <strong class="price-value">248 دولار</strong>
-            <p class="price-mini">جاهز للتشغيل بعد التوصيل المباشر</p>
+            <p class="price-label" data-i18n="price_label">Unit Price</p>
+            <strong class="price-value" data-i18n="price_value">$248</strong>
+            <p class="price-mini" data-i18n="price_mini">Ready to run after direct connection</p>
           </aside>
         </div>
       </div>
@@ -206,73 +204,73 @@
     <section class="section order" id="order">
       <div class="container">
         <div class="section-head reveal">
-          <p class="kicker">الشراء والدفع</p>
-          <h2>إتمام الطلب بخطوات واضحة وسريعة</h2>
-          <p>لشراء المنتج، يرجى تعبئة البيانات التالية بدقة، ونوفر التوصيل إلى جميع المناطق بعد تأكيد الطلب.</p>
+          <p class="kicker" data-i18n="order_kicker">Ordering & Payment</p>
+          <h2 data-i18n="order_title">Place your order in a few clear steps</h2>
+          <p data-i18n="order_desc">Complete the form below. We confirm quickly and arrange delivery after payment verification.</p>
         </div>
 
         <div class="order-grid">
           <article class="payment-card reveal">
-            <h3>طريقة الدفع</h3>
+            <h3 data-i18n="payment_title">Payment Method</h3>
             <div class="payment-flow">
               <article class="pay-step">
                 <span class="pay-badge vcash">1</span>
                 <div>
-                  <h4>تحويل فودافون كاش</h4>
-                  <p>الدفع قبل الاستلام عبر فودافون كاش على الرقم: <strong>01044175125</strong></p>
-                  <p class="pay-confirm">↦ للتأكيد الفوري، أرسل لقطة التحويل مباشرة بعد السداد.</p>
+                  <h4 data-i18n="pay_1_title">Vodafone Cash Transfer</h4>
+                  <p data-i18n="pay_1_text">Payment is required before delivery via Vodafone Cash to: 01044175125</p>
+                  <p class="pay-confirm" data-i18n="pay_1_confirm">↦ For instant confirmation, send a transfer screenshot right after payment.</p>
                 </div>
               </article>
               <article class="pay-step">
                 <span class="pay-badge">2</span>
                 <div>
-                  <h4>تأكيد الطلب</h4>
-                  <p>بعد التحويل يتم اعتماد الطلب وتجهيز الشحنة.</p>
+                  <h4 data-i18n="pay_2_title">Order Confirmation</h4>
+                  <p data-i18n="pay_2_text">After payment verification, your order is approved and prepared for dispatch.</p>
                 </div>
               </article>
               <article class="pay-step">
                 <span class="pay-badge">3</span>
                 <div>
-                  <h4>التوصيل والتركيب</h4>
-                  <p>يصلك الجهاز جاهزًا للتركيب والتشغيل المباشر.</p>
+                  <h4 data-i18n="pay_3_title">Delivery & Setup</h4>
+                  <p data-i18n="pay_3_text">Your unit arrives ready for quick installation and immediate operation.</p>
                 </div>
               </article>
             </div>
             <div class="payment-strip">
-              <span class="strip-price">248 دولار</span>
-              <span>ضمان سنة</span>
-              <span>مصمم للعمل بثبات طويل الأمد، وغالبًا لا يحتاج إلى إصلاح أو صيانة لمدة سنتين فأكثر.</span>
+              <span class="strip-price" data-i18n="strip_price">$248 per unit</span>
+              <span data-i18n="strip_warranty">1-year warranty</span>
+              <span data-i18n="strip_durability">Designed for long-term stable performance and typically minimal service for 2+ years.</span>
             </div>
-            <p class="payment-note">بعد إرسال بيانات الطلب، سيتم تأكيد التحويل والتوصيل فورًا.</p>
+            <p class="payment-note" data-i18n="payment_note">After you submit your order details, we confirm payment and dispatch promptly.</p>
           </article>
 
           <form class="order-form reveal delay-1" id="orderForm">
             <label>
-              الاسم
-              <input type="text" name="buyer_name" placeholder="الاسم الكامل" required />
+              <span data-i18n="form_buyer_name_label">Full Name</span>
+              <input type="text" name="buyer_name" data-i18n-placeholder="form_buyer_name_placeholder" placeholder="Enter full name" required />
             </label>
             <label>
-              رقم الموبايل
+              <span data-i18n="form_buyer_phone_label">Mobile Number</span>
               <input type="tel" name="buyer_phone" required />
             </label>
             <label>
-              عنوان التوصيل (Delivery)
-              <textarea name="delivery_address" rows="3" placeholder="اكتب عنوان التوصيل بالتفصيل" required></textarea>
+              <span data-i18n="form_delivery_label">Delivery Address</span>
+              <textarea name="delivery_address" rows="3" data-i18n-placeholder="form_delivery_placeholder" placeholder="Enter full delivery address" required></textarea>
             </label>
             <label>
-              اسم المُرسِل للتحويل
-              <input type="text" name="sender_name" placeholder="اسم المُرسِل في التحويل" required />
+              <span data-i18n="form_sender_name_label">Transfer Sender Name</span>
+              <input type="text" name="sender_name" data-i18n-placeholder="form_sender_name_placeholder" placeholder="Enter sender name used in transfer" required />
             </label>
             <label>
-              رقم موبايل المُرسِل
+              <span data-i18n="form_sender_phone_label">Sender Mobile Number</span>
               <input type="tel" name="sender_phone" required />
             </label>
             <label>
-              ملاحظات الطلب (اختياري)
-              <textarea name="notes" rows="2" placeholder="أي تفاصيل إضافية"></textarea>
+              <span data-i18n="form_notes_label">Order Notes (Optional)</span>
+              <textarea name="notes" rows="2" data-i18n-placeholder="form_notes_placeholder" placeholder="Add any extra details"></textarea>
             </label>
-            <button type="submit" class="btn btn-primary">إرسال طلب الشراء</button>
-            <p class="form-msg" id="orderStatus">سيتم إرسال بياناتك عبر واتساب مباشرة.</p>
+            <button type="submit" class="btn btn-primary" data-i18n="form_submit">Send Purchase Request</button>
+            <p class="form-msg" id="orderStatus" data-i18n="form_status_default">Your order details will be sent directly through WhatsApp.</p>
           </form>
         </div>
       </div>
@@ -282,9 +280,9 @@
       <div class="container">
         <div class="contact-box reveal">
           <div>
-            <p class="kicker">التواصل المباشر</p>
-            <h2>للاستفسارات والعروض الفنية</h2>
-            <p>للطلب والاستفسار السريع، تواصل عبر واتساب مباشرة.</p>
+            <p class="kicker" data-i18n="contact_kicker">Direct Contact</p>
+            <h2 data-i18n="contact_title">For technical inquiries and commercial offers</h2>
+            <p data-i18n="contact_desc">For quick support and fast ordering, contact us directly on WhatsApp.</p>
           </div>
           <div class="contact-data">
             <p class="line-item">
@@ -296,7 +294,7 @@
               </span>
               <span><strong>01044175125</strong></span>
             </p>
-            <a class="btn btn-primary" href="https://wa.me/201044175125" target="_blank" rel="noopener noreferrer">بدء المحادثة عبر واتساب</a>
+            <a class="btn btn-primary" href="https://wa.me/201044175125" target="_blank" rel="noopener noreferrer" data-i18n="contact_whatsapp_btn">Start WhatsApp Chat</a>
           </div>
         </div>
       </div>
@@ -305,7 +303,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>CATALYST STEAM © جميع الحقوق محفوظة</p>
+      <p data-i18n="footer_rights">CATALYST STEAM © All rights reserved</p>
     </div>
   </footer>
 

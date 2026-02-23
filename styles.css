@@ -27,6 +27,16 @@ body {
   line-height: 1.8;
 }
 
+body.lang-en {
+  font-family: "Manrope", "Tajawal", sans-serif;
+  line-height: 1.65;
+}
+
+body.lang-ar {
+  font-family: "Tajawal", "Manrope", sans-serif;
+  line-height: 1.8;
+}
+
 .site-bg::before,
 .site-bg::after {
   content: "";
@@ -122,6 +132,33 @@ body {
 
 .nav-links a:hover {
   color: var(--saudi-green);
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #d6c8ef;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  color: #5d4a8d;
+  font: inherit;
+  font-weight: 800;
+  line-height: 1;
+  padding: 8px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.lang-btn.is-active {
+  background: linear-gradient(120deg, var(--saudi-green), #8a63ff);
+  color: #fff;
 }
 
 .btn {
@@ -859,6 +896,10 @@ h3 {
 }
 
 @media (max-width: 680px) {
+  .nav-wrap {
+    flex-wrap: wrap;
+  }
+
   .hero {
     min-height: 78vh;
     padding-top: 44px;
