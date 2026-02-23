@@ -66,7 +66,7 @@ const translations = {
     order_desc: "Complete the form below. We confirm quickly and arrange delivery after payment verification.",
     payment_title: "Payment Method",
     pay_1_title: "Vodafone Cash Transfer",
-    pay_1_text: "Payment is required before delivery via Vodafone Cash to: 01044175125",
+    pay_1_text: "Payment is required before delivery via Vodafone Cash to: +201044175125",
     pay_1_confirm: "↦ For instant confirmation, send a transfer screenshot right after payment.",
     pay_2_title: "Order Confirmation",
     pay_2_text: "After payment verification, your order is approved and prepared for dispatch.",
@@ -88,11 +88,14 @@ const translations = {
     form_notes_placeholder: "Add any extra details",
     form_submit: "Send Purchase Request",
     form_status_default: "Your order details will be sent directly through WhatsApp.",
-    form_status_sent: "Your order message is ready and WhatsApp has been opened.",
+    form_status_sent: "Your order message is ready and both WhatsApp chats have been opened.",
     contact_kicker: "Direct Contact",
     contact_title: "For technical inquiries and commercial offers",
     contact_desc: "For quick support and fast ordering, contact us directly on WhatsApp.",
-    contact_whatsapp_btn: "Start WhatsApp Chat",
+    contact_phone_eg: "+201044175125",
+    contact_phone_ksa: "+966565513212",
+    contact_whatsapp_btn_eg: "WhatsApp Egypt",
+    contact_whatsapp_btn_ksa: "WhatsApp KSA",
     footer_rights: "CATALYST STEAM © All rights reserved",
     whatsapp_headline: "New Purchase Request - Catalyst Steam",
     whatsapp_buyer_name: "Full Name",
@@ -170,7 +173,7 @@ const translations = {
     order_desc: "املأ النموذج التالي بدقة، وسيتم تأكيد طلبك سريعًا وترتيب التوصيل بعد التحقق من الدفع.",
     payment_title: "طريقة الدفع",
     pay_1_title: "تحويل فودافون كاش",
-    pay_1_text: "الدفع قبل الاستلام عبر فودافون كاش على الرقم: 01044175125",
+    pay_1_text: "الدفع قبل الاستلام عبر فودافون كاش على الرقم: +201044175125",
     pay_1_confirm: "↦ للتأكيد الفوري، أرسل لقطة التحويل مباشرة بعد السداد.",
     pay_2_title: "تأكيد الطلب",
     pay_2_text: "بعد التحقق من التحويل يتم اعتماد الطلب وتجهيزه للشحن.",
@@ -192,11 +195,14 @@ const translations = {
     form_notes_placeholder: "أي تفاصيل إضافية",
     form_submit: "إرسال طلب الشراء",
     form_status_default: "سيتم إرسال بياناتك عبر واتساب مباشرة.",
-    form_status_sent: "تم تجهيز رسالة الطلب وفتح واتساب لإرسالها.",
+    form_status_sent: "تم تجهيز رسالة الطلب وفتح محادثتي واتساب (مصر والسعودية).",
     contact_kicker: "التواصل المباشر",
     contact_title: "للاستفسارات الفنية والعروض التجارية",
     contact_desc: "للدعم السريع وإتمام الطلب، تواصل معنا مباشرة عبر واتساب.",
-    contact_whatsapp_btn: "بدء المحادثة عبر واتساب",
+    contact_phone_eg: "+201044175125",
+    contact_phone_ksa: "+966565513212",
+    contact_whatsapp_btn_eg: "واتساب مصر",
+    contact_whatsapp_btn_ksa: "واتساب السعودية",
     footer_rights: "CATALYST STEAM © جميع الحقوق محفوظة",
     whatsapp_headline: "طلب شراء جديد - Catalyst Steam",
     whatsapp_buyer_name: "الاسم",
@@ -305,8 +311,12 @@ if (orderForm) {
       dictionary.whatsapp_payment_ack,
     ].filter(Boolean);
 
-    const url = `https://wa.me/201044175125?text=${encodeURIComponent(lines.join("\n"))}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    const message = encodeURIComponent(lines.join("\n"));
+    const whatsappTargets = ["201044175125", "966565513212"];
+
+    whatsappTargets.forEach((number) => {
+      window.open(`https://wa.me/${number}?text=${message}`, "_blank", "noopener,noreferrer");
+    });
 
     if (orderStatus) {
       orderStatus.textContent = dictionary.form_status_sent;

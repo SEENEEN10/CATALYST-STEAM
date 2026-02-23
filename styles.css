@@ -838,6 +838,11 @@ h3 {
   font-weight: 700;
 }
 
+.contact-actions {
+  display: grid;
+  gap: 8px;
+}
+
 .site-footer {
   border-top: 1px solid #ddd2ef;
   padding: 22px 0 30px;
