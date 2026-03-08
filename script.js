@@ -6,7 +6,6 @@ const translations = {
     nav_solution: "Solution",
     nav_applications: "Applications",
     nav_media: "How It Works",
-    nav_order: "Order & Payment",
     nav_contact: "Contact",
     cta_whatsapp_top: "WhatsApp Direct",
     hero_eyebrow: "Smart instant steam technology that improves productivity and simplifies daily operations",
@@ -17,7 +16,7 @@ const translations = {
     feature_3: "Steam starts immediately when the water line is opened.",
     feature_4: "No complex piping and no heavy infrastructure.",
     cta_quote: "Request a Quote on WhatsApp",
-    cta_order: "Order Now",
+    cta_order: "Contact for Price",
     solution_kicker: "Operational Value",
     solution_title: "Practical engineering built for modern businesses",
     solution_desc: "Instead of complex traditional steam systems, this solution gives you a smarter operating model with better efficiency, stronger reliability, and simpler daily management.",
@@ -61,50 +60,13 @@ const translations = {
     price_label: "Unit Price",
     price_value: "$248",
     price_mini: "Ready to run after direct connection",
-    order_kicker: "Ordering & Payment",
-    order_title: "Place your order in a few clear steps",
-    order_desc: "Complete the form below. We confirm quickly and arrange delivery after payment verification.",
-    payment_title: "Payment Method",
-    pay_1_title: "Vodafone Cash Transfer",
-    pay_1_text: "Payment is required before delivery via Vodafone Cash to: +201044175125",
-    pay_1_confirm: "↦ For instant confirmation, send a transfer screenshot right after payment.",
-    pay_2_title: "Order Confirmation",
-    pay_2_text: "After payment verification, your order is approved and prepared for dispatch.",
-    pay_3_title: "Delivery & Setup",
-    pay_3_text: "Your unit arrives ready for quick installation and immediate operation.",
-    strip_price: "$248 per unit",
-    strip_warranty: "1-year warranty",
-    strip_durability: "Designed for long-term stable performance and typically minimal service for 2+ years.",
-    payment_note: "After you submit your order details, we confirm payment and dispatch promptly.",
-    form_buyer_name_label: "Full Name",
-    form_buyer_name_placeholder: "Enter full name",
-    form_buyer_phone_label: "Mobile Number",
-    form_delivery_label: "Delivery Address",
-    form_delivery_placeholder: "Enter full delivery address",
-    form_sender_name_label: "Transfer Sender Name",
-    form_sender_name_placeholder: "Enter sender name used in transfer",
-    form_sender_phone_label: "Sender Mobile Number",
-    form_notes_label: "Order Notes (Optional)",
-    form_notes_placeholder: "Add any extra details",
-    form_submit: "Send Purchase Request",
-    form_status_default: "Your order details will be sent directly through WhatsApp.",
-    form_status_sent: "Your order message is ready and both WhatsApp chats have been opened.",
-    contact_kicker: "Direct Contact",
-    contact_title: "For technical inquiries and commercial offers",
-    contact_desc: "For quick support and fast ordering, contact us directly on WhatsApp.",
-    contact_phone_eg: "+201044175125",
+    contact_kicker: "Price & Quotations",
+    contact_title: "For pricing and quotation, contact this number",
+    contact_desc: "For pricing details and quotation requests, contact the Saudi WhatsApp number below.",
+    contact_name: "Dani Sinai",
     contact_phone_ksa: "+966565513212",
-    contact_whatsapp_btn_eg: "WhatsApp Egypt",
-    contact_whatsapp_btn_ksa: "WhatsApp KSA",
-    footer_rights: "CATALYST STEAM © All rights reserved",
-    whatsapp_headline: "New Purchase Request - Catalyst Steam",
-    whatsapp_buyer_name: "Full Name",
-    whatsapp_buyer_phone: "Mobile Number",
-    whatsapp_delivery_address: "Delivery Address",
-    whatsapp_sender_name: "Transfer Sender Name",
-    whatsapp_sender_phone: "Sender Mobile Number",
-    whatsapp_notes: "Notes",
-    whatsapp_payment_ack: "Payment-before-delivery condition has been reviewed and accepted."
+    contact_whatsapp_btn_ksa: "WhatsApp Saudi",
+    footer_rights: "CATALYST STEAM © All rights reserved"
   },
   ar: {
     meta_title: "CATALYST STEAM | حلول التبخير الفوري",
@@ -113,7 +75,6 @@ const translations = {
     nav_solution: "الحل",
     nav_applications: "التطبيقات",
     nav_media: "آلية التشغيل",
-    nav_order: "الشراء والدفع",
     nav_contact: "التواصل",
     cta_whatsapp_top: "واتساب مباشر",
     hero_eyebrow: "تقنية تبخير فوري ذكية ترفع الكفاءة وتبسط التشغيل اليومي",
@@ -124,7 +85,7 @@ const translations = {
     feature_3: "بمجرد فتح مصدر المياه يبدأ خروج البخار مباشرة.",
     feature_4: "بدون توصيلات معقدة وبدون بنية تحتية ثقيلة.",
     cta_quote: "اطلب عرض سعر عبر واتساب",
-    cta_order: "اطلب الآن",
+    cta_order: "تواصل لمعرفة السعر",
     solution_kicker: "القيمة التشغيلية",
     solution_title: "حل هندسي عملي يخدم بيئة الأعمال الحديثة",
     solution_desc: "بدل الاعتماد على منظومات تبخير تقليدية معقدة، يمنحك هذا الحل نموذج تشغيل أذكى يجمع بين الكفاءة والثبات وسهولة الإدارة اليومية.",
@@ -168,50 +129,13 @@ const translations = {
     price_label: "سعر الوحدة",
     price_value: "248 دولار",
     price_mini: "جاهز للتشغيل بعد التوصيل المباشر",
-    order_kicker: "الشراء والدفع",
-    order_title: "أكمل طلبك بخطوات واضحة وسريعة",
-    order_desc: "املأ النموذج التالي بدقة، وسيتم تأكيد طلبك سريعًا وترتيب التوصيل بعد التحقق من الدفع.",
-    payment_title: "طريقة الدفع",
-    pay_1_title: "تحويل فودافون كاش",
-    pay_1_text: "الدفع قبل الاستلام عبر فودافون كاش على الرقم: +201044175125",
-    pay_1_confirm: "↦ للتأكيد الفوري، أرسل لقطة التحويل مباشرة بعد السداد.",
-    pay_2_title: "تأكيد الطلب",
-    pay_2_text: "بعد التحقق من التحويل يتم اعتماد الطلب وتجهيزه للشحن.",
-    pay_3_title: "التوصيل والتركيب",
-    pay_3_text: "يصلك الجهاز جاهزًا للتركيب السريع والتشغيل المباشر.",
-    strip_price: "248 دولار للوحدة",
-    strip_warranty: "ضمان سنة",
-    strip_durability: "مصمم للعمل بثبات طويل الأمد، وغالبًا مع حد أدنى من الصيانة لمدة سنتين أو أكثر.",
-    payment_note: "بعد إرسال بيانات الطلب، يتم تأكيد الدفع وتجهيز الشحنة بسرعة.",
-    form_buyer_name_label: "الاسم",
-    form_buyer_name_placeholder: "اكتب الاسم الكامل",
-    form_buyer_phone_label: "رقم الموبايل",
-    form_delivery_label: "عنوان التوصيل",
-    form_delivery_placeholder: "اكتب عنوان التوصيل بالتفصيل",
-    form_sender_name_label: "اسم المُرسِل للتحويل",
-    form_sender_name_placeholder: "اكتب اسم المُرسِل في التحويل",
-    form_sender_phone_label: "رقم موبايل المُرسِل",
-    form_notes_label: "ملاحظات الطلب (اختياري)",
-    form_notes_placeholder: "أي تفاصيل إضافية",
-    form_submit: "إرسال طلب الشراء",
-    form_status_default: "سيتم إرسال بياناتك عبر واتساب مباشرة.",
-    form_status_sent: "تم تجهيز رسالة الطلب وفتح محادثتي واتساب (مصر والسعودية).",
-    contact_kicker: "التواصل المباشر",
-    contact_title: "للاستفسارات الفنية والعروض التجارية",
-    contact_desc: "للدعم السريع وإتمام الطلب، تواصل معنا مباشرة عبر واتساب.",
-    contact_phone_eg: "+201044175125",
+    contact_kicker: "الأسعار وعروض الأسعار",
+    contact_title: "للسعر وطلب عرض سعر، تواصل على هذا الرقم",
+    contact_desc: "للاستفسار عن الأسعار وطلب عروض الأسعار، تواصل عبر رقم واتساب السعودي أدناه.",
+    contact_name: "داني سي ناي",
     contact_phone_ksa: "+966565513212",
-    contact_whatsapp_btn_eg: "واتساب مصر",
     contact_whatsapp_btn_ksa: "واتساب السعودية",
-    footer_rights: "CATALYST STEAM © جميع الحقوق محفوظة",
-    whatsapp_headline: "طلب شراء جديد - Catalyst Steam",
-    whatsapp_buyer_name: "الاسم",
-    whatsapp_buyer_phone: "رقم الموبايل",
-    whatsapp_delivery_address: "عنوان التوصيل",
-    whatsapp_sender_name: "اسم المُرسِل للتحويل",
-    whatsapp_sender_phone: "رقم موبايل المُرسِل",
-    whatsapp_notes: "ملاحظات",
-    whatsapp_payment_ack: "تم الاطلاع على شرط الدفع قبل الاستلام."
+    footer_rights: "CATALYST STEAM © جميع الحقوق محفوظة"
   }
 };
 
@@ -231,8 +155,6 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach((el) => revealObserver.observe(el));
 
 const languageButtons = document.querySelectorAll(".lang-btn");
-const orderForm = document.getElementById("orderForm");
-const orderStatus = document.getElementById("orderStatus");
 
 function applyLanguage(lang) {
   const selectedLang = lang === "ar" ? "ar" : "en";
@@ -284,42 +206,3 @@ const initialLanguage = storedLanguage === "en" || storedLanguage === "ar"
     : "en";
 
 applyLanguage(initialLanguage);
-
-if (orderForm) {
-  orderForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(orderForm);
-    const buyerName = String(formData.get("buyer_name") || "").trim();
-    const buyerPhone = String(formData.get("buyer_phone") || "").trim();
-    const deliveryAddress = String(formData.get("delivery_address") || "").trim();
-    const senderName = String(formData.get("sender_name") || "").trim();
-    const senderPhone = String(formData.get("sender_phone") || "").trim();
-    const notes = String(formData.get("notes") || "").trim();
-
-    const currentLang = document.documentElement.lang === "ar" ? "ar" : "en";
-    const dictionary = translations[currentLang];
-
-    const lines = [
-      dictionary.whatsapp_headline,
-      `${dictionary.whatsapp_buyer_name}: ${buyerName}`,
-      `${dictionary.whatsapp_buyer_phone}: ${buyerPhone}`,
-      `${dictionary.whatsapp_delivery_address}: ${deliveryAddress}`,
-      `${dictionary.whatsapp_sender_name}: ${senderName}`,
-      `${dictionary.whatsapp_sender_phone}: ${senderPhone}`,
-      notes ? `${dictionary.whatsapp_notes}: ${notes}` : null,
-      dictionary.whatsapp_payment_ack,
-    ].filter(Boolean);
-
-    const message = encodeURIComponent(lines.join("\n"));
-    const whatsappTargets = ["201044175125", "966565513212"];
-
-    whatsappTargets.forEach((number) => {
-      window.open(`https://wa.me/${number}?text=${message}`, "_blank", "noopener,noreferrer");
-    });
-
-    if (orderStatus) {
-      orderStatus.textContent = dictionary.form_status_sent;
-    }
-  });
-}

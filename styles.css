@@ -188,6 +188,29 @@ body.lang-ar {
   background: linear-gradient(120deg, var(--saudi-green-strong), #6e4bdf);
 }
 
+.btn-whatsapp-top {
+  color: #fff;
+  background: linear-gradient(120deg, #25d366, #128c43);
+  border-color: #128c43;
+}
+
+.btn-whatsapp-top:hover {
+  background: linear-gradient(120deg, #1eb95a, #0f7b3a);
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+.btn-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
 .btn-outline {
   color: var(--saudi-green-strong);
   border-color: var(--saudi-green);
@@ -716,6 +739,35 @@ h3 {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.phone-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phone-number {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+.phone-inline-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 1px solid #9ed8b2;
+  background: #e8f9ef;
+  color: #128c43;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+.phone-inline-icon svg {
+  width: 12px;
+  height: 12px;
 }
 
 .line-icon {
