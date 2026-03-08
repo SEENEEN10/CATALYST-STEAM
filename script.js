@@ -64,7 +64,7 @@ const translations = {
     contact_title: "For pricing and quotation, contact this number",
     contact_desc: "For pricing details and quotation requests, contact the number below.",
     contact_name: "Dani Sinai",
-    contact_position: "GLOBAL EXECUTIVE DIRECTRO",
+    contact_position: "GLOBAL EXECUTIVE DIRECTOR",
     contact_phone_ksa: "+966565513212",
     footer_rights: "CATALYST STEAM © All rights reserved"
   },
