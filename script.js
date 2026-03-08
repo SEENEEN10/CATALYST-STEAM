@@ -62,10 +62,10 @@ const translations = {
     price_mini: "Ready to run after direct connection",
     contact_kicker: "Price & Quotations",
     contact_title: "For pricing and quotation, contact this number",
-    contact_desc: "For pricing details and quotation requests, contact the Saudi WhatsApp number below.",
+    contact_desc: "For pricing details and quotation requests, contact the number below.",
     contact_name: "Dani Sinai",
+    contact_position: "GLOBAL EXECUTIVE DIRECTRO",
     contact_phone_ksa: "+966565513212",
-    contact_whatsapp_btn_ksa: "WhatsApp Saudi",
     footer_rights: "CATALYST STEAM © All rights reserved"
   },
   ar: {
@@ -131,10 +131,10 @@ const translations = {
     price_mini: "جاهز للتشغيل بعد التوصيل المباشر",
     contact_kicker: "الأسعار وعروض الأسعار",
     contact_title: "للسعر وطلب عرض سعر، تواصل على هذا الرقم",
-    contact_desc: "للاستفسار عن الأسعار وطلب عروض الأسعار، تواصل عبر رقم واتساب السعودي أدناه.",
+    contact_desc: "للاستفسار عن الأسعار وطلب عروض الأسعار، تواصل عبر الرقم أدناه.",
     contact_name: "داني سي ناي",
+    contact_position: "الرئيس التنفيذي",
     contact_phone_ksa: "+966565513212",
-    contact_whatsapp_btn_ksa: "واتساب السعودية",
     footer_rights: "CATALYST STEAM © جميع الحقوق محفوظة"
   }
 };
