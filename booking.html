@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book your Catalyst Steam device - Instant Steam Solutions" />
+  <title data-i18n="booking_title">Booking - Catalyst Steam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .booking-form { max-width: 600px; margin: 0 auto; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-weight: 600; margin-bottom: 8px; }
+    .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; }
+    .payment-options { display: flex; gap: 20px; }
+    .payment-option { flex: 1; padding: 20px; border: 1px solid #ddd; border-radius: 8px; text-align: center; cursor: pointer; transition: border-color 0.3s; }
+    .payment-option.selected { border-color: #6a49e9; background: #f8f9ff; }
+    .payment-option h3 { margin: 0 0 10px; }
+    .vodafone-info { background: #f0f8ff; border: 1px solid #add8e6; padding: 15px; border-radius: 6px; margin-top: 10px; }
+    .print-btn { background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-top: 20px; }
+    .print-btn:hover { background: #218838; }
+    @media print { .no-print { display: none; } .print-show { display: block; } }
+  </style>
+</head>
+<body class="lang-en">
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img class="brand-logo" src="assets/media/catalyst-logo-top.svg" alt="Catalyst logo" />
+        <div class="brand-copy">
+          <strong>CATALYST STEAM</strong>
+          <span data-i18n="brand_subtitle">Engineering Company for Instant Steam Solutions</span>
+        </div>
+      </a>
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button type="button" class="lang-btn is-active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="ar">AR</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="booking-form">
+          <h1 data-i18n="booking_title">Book Your Device</h1>
+          <p data-i18n="booking_desc">Fill out the form below to request a quotation and place your order. All orders are packed and delivered directly.</p>
+
+          <form id="bookingForm">
+            <div class="form-group">
+              <label for="name" data-i18n="label_name">Full Name</label>
+              <input type="text" id="name" name="name" required data-i18n-placeholder="placeholder_name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email" data-i18n="label_email">Email Address</label>
+              <input type="email" id="email" name="email" required data-i18n-placeholder="placeholder_email" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone" data-i18n="label_phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required data-i18n-placeholder="placeholder_phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="quantity" data-i18n="label_quantity">Quantity</label>
+              <select id="quantity" name="quantity" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6+</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label data-i18n="label_payment">Payment Method</label>
+              <div class="payment-options">
+                <div class="payment-option" data-method="cash">
+                  <h3 data-i18n="payment_cash">Full Cash</h3>
+                  <p data-i18n="payment_cash_desc">Pay the full amount upfront</p>
+                </div>
+                <div class="payment-option" data-method="delivery">
+                  <h3 data-i18n="payment_delivery">Pay on Delivery</h3>
+                  <p data-i18n="payment_delivery_desc">Pay when you receive the product</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="vodafoneInfo" class="vodafone-info no-print" style="display: none;">
+              <h4 data-i18n="vodafone_title">Vodafone Cash Payment</h4>
+              <p data-i18n="vodafone_desc">Send payment to Vodafone Cash number: <strong id="vodafoneNumber">[PHONE_NUMBER_PLACEHOLDER]</strong></p>
+              <p data-i18n="vodafone_instructions">After payment, send the receipt via WhatsApp to the same number.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" data-i18n="btn_submit">Submit Order Request</button>
+          </form>
+
+          <button class="print-btn no-print" onclick="window.print()" data-i18n="btn_print">Print/Save Order Form</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    // Booking form specific script
+    const translations = {
+      en: {
+        booking_title: "Book Your Device",
+        booking_desc: "Fill out the form below to request a quotation and place your order. All orders are packed and delivered directly.",
+        label_name: "Full Name",
+        label_email: "Email Address",
+        label_phone: "Phone Number",
+        label_quantity: "Quantity",
+        label_payment: "Payment Method",
+        payment_cash: "Full Cash",
+        payment_cash_desc: "Pay the full amount upfront",
+        payment_delivery: "Pay on Delivery",
+        payment_delivery_desc: "Pay when you receive the product",
+        vodafone_title: "Vodafone Cash Payment",
+        vodafone_desc: "Send payment to Vodafone Cash number:",
+        vodafone_instructions: "After payment, send the receipt via WhatsApp to the same number.",
+        btn_submit: "Submit Order Request",
+        btn_print: "Print/Save Order Form",
+        placeholder_name: "Enter your full name",
+        placeholder_email: "Enter your email address",
+        placeholder_phone: "Enter your phone number"
+      },
+      ar: {
+        booking_title: "احجز جهازك",
+        booking_desc: "املأ النموذج أدناه لطلب عرض أسعار وتقديم طلبك. جميع الطلبات معبأة ومُسلمة مباشرة.",
+        label_name: "الاسم الكامل",
+        label_email: "عنوان البريد الإلكتروني",
+        label_phone: "رقم الهاتف",
+        label_quantity: "الكمية",
+        label_payment: "طريقة الدفع",
+        payment_cash: "الدفع نقدًا كاملاً",
+        payment_cash_desc: "ادفع المبلغ الكامل مقدمًا",
+        payment_delivery: "الدفع عند التسليم",
+        payment_delivery_desc: "ادفع عند استلام المنتج",
+        vodafone_title: "دفع فودافون كاش",
+        vodafone_desc: "أرسل الدفع إلى رقم فودافون كاش:",
+        vodafone_instructions: "بعد الدفع، أرسل الإيصال عبر واتساب إلى نفس الرقم.",
+        btn_submit: "إرسال طلب الشراء",
+        btn_print: "طباعة/حفظ نموذج الطلب",
+        placeholder_name: "أدخل اسمك الكامل",
+        placeholder_email: "أدخل عنوان بريدك الإلكتروني",
+        placeholder_phone: "أدخل رقم هاتفك"
+      }
+    };
+
+    // Apply translations to booking page
+    function applyBookingTranslations(lang) {
+      const dict = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.dataset.i18nPlaceholder;
+        if (dict[key]) el.placeholder = dict[key];
+      });
+    }
+
+    // Language switching for booking page
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        document.body.classList.toggle('lang-ar', lang === 'ar');
+        document.body.classList.toggle('lang-en', lang === 'en');
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
+        applyBookingTranslations(lang);
+        localStorage.setItem('catalyst_lang', lang);
+      });
+    });
+
+    // Load saved language
+    const savedLang = localStorage.getItem('catalyst_lang') || 'en';
+    if (savedLang === 'ar') {
+      document.querySelector('[data-lang="ar"]').click();
+    } else {
+      applyBookingTranslations('en');
+    }
+
+    // Payment method selection
+    const paymentOptions = document.querySelectorAll('.payment-option');
+    let selectedPayment = null;
+
+    paymentOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        paymentOptions.forEach(opt => opt.classList.remove('selected'));
+        option.classList.add('selected');
+        selectedPayment = option.dataset.method;
+        document.getElementById('vodafoneInfo').style.display = selectedPayment === 'cash' ? 'block' : 'none';
+      });
+    });
+
+    // Form submission
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (!selectedPayment) {
+        alert('Please select a payment method.');
+        return;
+      }
+
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const phone = formData.get('phone');
+      const quantity = formData.get('quantity');
+      const paymentMethod = selectedPayment === 'cash' ? 'Full Cash (Vodafone Cash)' : 'Pay on Delivery';
+
+      const message = `New Order Request:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nQuantity: ${quantity}\nPayment Method: ${paymentMethod}\n\nPlease provide quotation.`;
+
+      const whatsappUrl = `https://wa.me/966565513212?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  </script>
+</body>
+</html>
