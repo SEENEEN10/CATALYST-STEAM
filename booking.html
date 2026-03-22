@@ -109,87 +109,11 @@
 
   <script src="script.js"></script>
   <script>
-    // Booking form specific script
-    const translations = {
-      en: {
-        booking_title: "Book Your Device",
-        booking_desc: "Fill out the form below to request a quotation and place your order. All orders are packed and delivered directly.",
-        label_name: "Full Name",
-        label_email: "Email Address",
-        label_phone: "Phone Number",
-        label_quantity: "Quantity",
-        label_payment: "Payment Method",
-        payment_cash: "Full Cash",
-        payment_cash_desc: "Pay the full amount upfront",
-        payment_delivery: "Pay on Delivery",
-        payment_delivery_desc: "Pay when you receive the product",
-        vodafone_title: "Vodafone Cash Payment",
-        vodafone_desc: "Send payment to Vodafone Cash number:",
-        vodafone_instructions: "After payment, send the receipt via WhatsApp to the same number.",
-        btn_submit: "Submit Order Request",
-        btn_print: "Print/Save Order Form",
-        placeholder_name: "Enter your full name",
-        placeholder_email: "Enter your email address",
-        placeholder_phone: "Enter your phone number"
-      },
-      ar: {
-        booking_title: "احجز جهازك",
-        booking_desc: "املأ النموذج أدناه لطلب عرض أسعار وتقديم طلبك. جميع الطلبات معبأة ومُسلمة مباشرة.",
-        label_name: "الاسم الكامل",
-        label_email: "عنوان البريد الإلكتروني",
-        label_phone: "رقم الهاتف",
-        label_quantity: "الكمية",
-        label_payment: "طريقة الدفع",
-        payment_cash: "الدفع نقدًا كاملاً",
-        payment_cash_desc: "ادفع المبلغ الكامل مقدمًا",
-        payment_delivery: "الدفع عند التسليم",
-        payment_delivery_desc: "ادفع عند استلام المنتج",
-        vodafone_title: "دفع فودافون كاش",
-        vodafone_desc: "أرسل الدفع إلى رقم فودافون كاش:",
-        vodafone_instructions: "بعد الدفع، أرسل الإيصال عبر واتساب إلى نفس الرقم.",
-        btn_submit: "إرسال طلب الشراء",
-        btn_print: "طباعة/حفظ نموذج الطلب",
-        placeholder_name: "أدخل اسمك الكامل",
-        placeholder_email: "أدخل عنوان بريدك الإلكتروني",
-        placeholder_phone: "أدخل رقم هاتفك"
-      }
-    };
-
-    // Apply translations to booking page
-    function applyBookingTranslations(lang) {
-      const dict = translations[lang];
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.dataset.i18n;
-        if (dict[key]) el.textContent = dict[key];
-      });
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.dataset.i18nPlaceholder;
-        if (dict[key]) el.placeholder = dict[key];
-      });
-    }
-
-    // Language switching for booking page
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.dataset.lang;
-        document.documentElement.lang = lang;
-        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-        document.body.classList.toggle('lang-ar', lang === 'ar');
-        document.body.classList.toggle('lang-en', lang === 'en');
-        document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
-        applyBookingTranslations(lang);
-        localStorage.setItem('catalyst_lang', lang);
-      });
-    });
-
-    // Load saved language
+    // Apply saved language on page load
     const savedLang = localStorage.getItem('catalyst_lang') || 'en';
-    if (savedLang === 'ar') {
-      document.querySelector('[data-lang="ar"]').click();
-    } else {
-      applyBookingTranslations('en');
-    }
+    applyLanguage(savedLang);
 
+    // Booking form specific script
     // Payment method selection
     const paymentOptions = document.querySelectorAll('.payment-option');
     let selectedPayment = null;
@@ -208,7 +132,8 @@
       e.preventDefault();
 
       if (!selectedPayment) {
-        alert('Please select a payment method.');
+        const alertMsg = document.documentElement.lang === 'ar' ? 'يرجى اختيار طريقة دفع.' : 'Please select a payment method.';
+        alert(alertMsg);
         return;
       }
 
@@ -219,7 +144,9 @@
       const quantity = formData.get('quantity');
       const paymentMethod = selectedPayment === 'cash' ? 'Full Cash (Vodafone Cash)' : 'Pay on Delivery';
 
-      const message = `New Order Request:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nQuantity: ${quantity}\nPayment Method: ${paymentMethod}\n\nPlease provide quotation.`;
+      const message = document.documentElement.lang === 'ar' 
+        ? `طلب شراء جديد:\n\nالاسم: ${name}\nالبريد الإلكتروني: ${email}\nالهاتف: ${phone}\nالكمية: ${quantity}\nطريقة الدفع: ${paymentMethod}\n\nيرجى تقديم عرض أسعار.`
+        : `New Order Request:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nQuantity: ${quantity}\nPayment Method: ${paymentMethod}\n\nPlease provide quotation.`;
 
       const whatsappUrl = `https://wa.me/966565513212?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
