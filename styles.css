@@ -390,30 +390,27 @@ h3 {
   background: linear-gradient(180deg, #f5efff 0%, #efe8fc 100%);
 }
 
-.product-gallery {
-  background: #fff;
+.spec-snapshots {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  align-items: stretch;
+.spec-snap {
+  width: calc(33.333% - 6.66px);
+  max-width: 110px;
+  border: 1px solid rgba(151, 136, 225, 0.35);
+  border-radius: 10px;
+  background: rgba(245, 244, 255, 0.75);
+  padding: 3px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
-.gallery-item {
-  border: 1px solid #e6e6f2;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(34, 34, 90, 0.08);
-}
-
-.gallery-item img {
+.spec-snap img {
   width: 100%;
   display: block;
-  height: auto;
-  object-fit: cover;
+  border-radius: 8px;
 }
 
 .specs {
