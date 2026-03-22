@@ -390,6 +390,29 @@ h3 {
   background: linear-gradient(180deg, #f5efff 0%, #efe8fc 100%);
 }
 
+.specs {
+  background: #fff;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+}
+
+.spec-item {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.spec-item strong {
+  color: var(--ink);
+}
+
 .section-head {
   max-width: 860px;
   margin-bottom: 24px;
