@@ -419,18 +419,51 @@ h3 {
 
 .specs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  max-width: 800px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  max-width: 880px;
 }
 
 .spec-item {
-  background: var(--bg-alt);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 16px;
-  text-align: center;
+  min-height: 120px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: 0;
+  padding: 0;
 }
+
+.spec-item strong {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: inline-block;
+  margin: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.spec-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.38);
+  z-index: 1;
+}
+
+.spec-item-image {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.spec-img-1 { background-image: url('assets/media/product-in-action.png'); }
+.spec-img-2 { background-image: url('assets/media/product-look.png'); }
+.spec-img-3 { background-image: url('pic4.png'); }
 
 .spec-item strong {
   color: var(--ink);
