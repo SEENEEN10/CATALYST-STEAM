@@ -390,83 +390,125 @@ h3 {
   background: linear-gradient(180deg, #f5efff 0%, #efe8fc 100%);
 }
 
-.spec-snapshots {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.spec-snap {
-  width: calc(33.333% - 6.66px);
-  max-width: 110px;
-  border: 1px solid rgba(151, 136, 225, 0.35);
-  border-radius: 10px;
-  background: rgba(245, 244, 255, 0.75);
-  padding: 3px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-}
-
-.spec-snap img {
-  width: 100%;
-  display: block;
-  border-radius: 8px;
-}
-
 .specs {
-  background: #fff;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(138, 99, 255, 0.3), transparent 34%),
+    radial-gradient(circle at bottom left, rgba(109, 79, 223, 0.34), transparent 42%),
+    linear-gradient(135deg, #12091f 0%, #241147 56%, #09050f 100%);
+}
+
+.specs::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.specs .container {
+  position: relative;
+  z-index: 1;
+}
+
+.specs .section-head h2,
+.specs .section-head p {
+  color: #fff;
+}
+
+.specs .section-head p {
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .specs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
-  max-width: 880px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
-.spec-item {
-  min-height: 120px;
-  border-radius: 14px;
+.spec-card {
+  position: relative;
+  min-height: 250px;
+  padding: 26px;
+  border-radius: 28px;
   overflow: hidden;
-  position: relative;
-  border: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 24px 60px rgba(3, 2, 10, 0.32);
+  isolation: isolate;
 }
 
-.spec-item strong {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
-  display: inline-block;
-  margin: 16px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
-  padding: 8px 10px;
-}
-
-.spec-item::before {
+.spec-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.38);
+  background:
+    linear-gradient(180deg, rgba(8, 8, 12, 0.12) 0%, rgba(8, 8, 12, 0.52) 44%, rgba(7, 6, 11, 0.9) 100%),
+    linear-gradient(135deg, rgba(159, 117, 247, 0.22), transparent 42%);
+  z-index: -1;
+}
+
+.spec-card > * {
+  position: relative;
   z-index: 1;
 }
 
-.spec-item-image {
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+.spec-label {
+  align-self: flex-start;
+  display: inline-flex;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(12px);
 }
 
-.spec-img-1 { background-image: url('assets/media/product-in-action.png'); }
-.spec-img-2 { background-image: url('assets/media/product-look.png'); }
-.spec-img-3 { background-image: url('pic4.png'); }
+.spec-card h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  line-height: 1.1;
+}
 
-.spec-item strong {
-  color: var(--ink);
+.spec-card p {
+  margin: 0;
+  max-width: 25rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.spec-card-power {
+  background-image: url('assets/media/product-in-action.png');
+  background-position: center 34%;
+}
+
+.spec-card-voltage {
+  background-image: url('assets/media/product-look.png');
+  background-position: center 55%;
+}
+
+.spec-card-design {
+  background-image: url('pic4.png');
+  background-position: center 44%;
+}
+
+.spec-card-size {
+  background-image: url('assets/media/product-in-action.png');
+  background-position: 58% 68%;
 }
 
 .section-head {
@@ -1026,6 +1068,10 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .specs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .app-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1067,7 +1113,8 @@ h3 {
   }
 
   .value-grid,
-  .app-grid {
+  .app-grid,
+  .specs-grid {
     grid-template-columns: 1fr;
   }
 
