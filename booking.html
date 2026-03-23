@@ -19,6 +19,9 @@
     .payment-option.selected { border-color: #6a49e9; background: #f8f9ff; }
     .payment-option h3 { margin: 0 0 10px; }
     .vodafone-info { background: #f0f8ff; border: 1px solid #add8e6; padding: 15px; border-radius: 6px; margin-top: 10px; }
+    .recipient-actions { display: grid; gap: 12px; margin-top: 18px; }
+    .recipient-actions .btn { width: 100%; }
+    .recipient-note { margin: 12px 0 0; color: #5d4a8d; font-weight: 600; }
     .print-btn { background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-top: 20px; }
     .print-btn:hover { background: #218838; }
     @media print { .no-print { display: none; } .print-show { display: block; } }
@@ -94,11 +97,15 @@
 
             <div id="vodafoneInfo" class="vodafone-info no-print" style="display: none;">
               <h4 data-i18n="vodafone_title">Vodafone Cash Payment</h4>
-              <p data-i18n="vodafone_desc">Send payment to Vodafone Cash number: <strong id="vodafoneNumber">[PHONE_NUMBER_PLACEHOLDER]</strong></p>
+              <p><span data-i18n="vodafone_desc">Send payment to Vodafone Cash number:</span> <strong id="vodafoneNumber" dir="ltr">01014173622</strong></p>
               <p data-i18n="vodafone_instructions">After payment, send the receipt via WhatsApp to the same number.</p>
             </div>
 
-            <button type="submit" class="btn btn-primary" data-i18n="btn_submit">Submit Order Request</button>
+            <div class="recipient-actions no-print">
+              <button type="submit" class="btn btn-primary" data-target="ksa" data-i18n="btn_submit_ksa">Send Order to Saudi WhatsApp</button>
+              <button type="submit" class="btn btn-outline" data-target="egypt" data-i18n="btn_submit_egypt">Send Order to Egypt WhatsApp</button>
+            </div>
+            <p class="recipient-note no-print" data-i18n="booking_whatsapp_note">Both WhatsApp numbers can receive your booking order.</p>
           </form>
 
           <button class="print-btn no-print" onclick="window.print()" data-i18n="btn_print">Print/Save Order Form</button>
@@ -109,6 +116,11 @@
 
   <script src="script.js"></script>
   <script>
+    const WHATSAPP_NUMBERS = {
+      ksa: "966565513212",
+      egypt: "201014173622"
+    };
+
     // Apply saved language on page load
     const savedLang = localStorage.getItem('catalyst_lang') || 'en';
     applyLanguage(savedLang);
@@ -142,13 +154,16 @@
       const email = formData.get('email');
       const phone = formData.get('phone');
       const quantity = formData.get('quantity');
-      const paymentMethod = selectedPayment === 'cash' ? 'Full Cash (Vodafone Cash)' : 'Pay on Delivery';
+      const paymentMethod = document.documentElement.lang === 'ar'
+        ? (selectedPayment === 'cash' ? 'الدفع نقدًا كاملاً (فودافون كاش)' : 'الدفع عند التسليم')
+        : (selectedPayment === 'cash' ? 'Full Cash (Vodafone Cash)' : 'Pay on Delivery');
+      const target = e.submitter?.dataset.target === 'egypt' ? 'egypt' : 'ksa';
 
       const message = document.documentElement.lang === 'ar' 
         ? `طلب شراء جديد:\n\nالاسم: ${name}\nالبريد الإلكتروني: ${email}\nالهاتف: ${phone}\nالكمية: ${quantity}\nطريقة الدفع: ${paymentMethod}\n\nيرجى تقديم عرض أسعار.`
         : `New Order Request:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nQuantity: ${quantity}\nPayment Method: ${paymentMethod}\n\nPlease provide quotation.`;
 
-      const whatsappUrl = `https://wa.me/966565513212?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBERS[target]}?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     });
   </script>
